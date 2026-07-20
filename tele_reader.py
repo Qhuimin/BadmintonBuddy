@@ -1,3 +1,8 @@
+WATCHED_CHATS = {
+    -1001645575981,  # Singapore Badminton East
+    -1001209528159,  # Singapore Badminton 🇸🇬🏸
+}
+
 from telethon import TelegramClient, events
 from dotenv import load_dotenv
 import os
@@ -17,6 +22,9 @@ async def handle_new_message(event):
     """
     Runs automatically every time a new Telegram message is received.
     """
+
+    if event.chat_id not in WATCHED_CHATS:
+        return
 
     chat = await event.get_chat()
 
