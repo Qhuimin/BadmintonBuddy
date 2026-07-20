@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# Telegram session
+*.session
+*.session-journal
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
